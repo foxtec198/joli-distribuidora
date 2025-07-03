@@ -7,7 +7,8 @@ body{
 }
 
 .hero{ 
-    background: linear-gradient(to right, #007BBD, #00B4DB); 
+    /* background: linear-gradient(to right, #007BBD, #00B4DB);  */
+    background: url('/img/water_bg2.png');
     color: white; 
     padding: 100px 0; 
     text-align: center; 
@@ -69,18 +70,19 @@ footer{
       white-space: nowrap;
       box-sizing: border-box;
       width: 100%;
-      background: #f0f0f0;
-      /* border: 1px solid #ccc; */
+      background: none;
 }
 
 .marquee-content {
     display: inline-block;
+    gap: 20px;
     padding-left: 100%; /* começa fora da tela */
     animation: marquee 15s linear infinite;
 }
 
 .marquee-content img{
-    max-width: 150px;
+    max-width: 20vh;
+    object-fit: contain;
 }
 
 @keyframes marquee {
@@ -88,7 +90,7 @@ footer{
     transform: translateX(0%);
     }
     to {
-    transform: translateX(-100%);
+    transform: translateX(-220%);
     }
 }
 
@@ -97,3 +99,30 @@ footer{
     display: inline-block;
     padding-right: 100%; /* espaço entre os dois blocos duplicados */
 }
+
+
+/* From Uiverse.io by kandalgaonkarshubham */ 
+.patt_cat  {
+  width: 100%;
+  height: 100%;
+
+  background: #fff;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(0, 0, 0, 0.37);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+}
+
